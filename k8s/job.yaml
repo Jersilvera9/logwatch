@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: logwatch-job
+  labels:
+    app: logwatch
+spec:
+  template:
+    spec:
+      containers:
+        - name: logwatch
+          image: logwatch:latest
+          imagePullPolicy: Never
+      restartPolicy: Never
+  backoffLimit: 2
