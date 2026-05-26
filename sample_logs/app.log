@@ -1,0 +1,15 @@
+2024-03-01 08:12:01 INFO Application started successfully
+2024-03-01 08:12:05 DEBUG Loading configuration from config.yaml
+2024-03-01 08:13:22 INFO Connected to database
+2024-03-01 08:15:10 WARNING Response time exceeded 500ms threshold
+2024-03-01 08:17:45 ERROR Failed to fetch user data: connection timeout
+2024-03-01 08:18:02 INFO Retrying request for user data
+2024-03-01 08:18:03 ERROR Failed to fetch user data: connection timeout
+2024-03-01 08:20:11 CRITICAL Database connection lost
+2024-03-01 08:20:15 ERROR Failed to fetch user data: connection timeout
+2024-03-01 08:21:00 ERROR Disk usage at 94% on /dev/sda1
+2024-03-01 08:22:30 WARNING Memory usage above 80%
+2024-03-01 08:23:01 CRITICAL Out of memory - killing process 4821
+2024-03-01 08:23:05 INFO Service restarted by watchdog
+2024-03-01 08:25:00 DEBUG Garbage collection completed in 120ms
+2024-03-01 08:26:10 INFO Health check passed
