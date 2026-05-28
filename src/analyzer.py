@@ -1,7 +1,7 @@
 from collections import Counter
 
 def count_by_severity(entries):
-    """Count how many log entries exist for each severity level."""
+    """Counts each existing log entries for severity levels""" 
     severity_counts = Counter()
 
     for entry in entries:
@@ -10,7 +10,7 @@ def count_by_severity(entries):
     return dict(severity_counts)
 
 def get_errors_and_criticals(entries):
-    """Pull out only ERROR and CRITICAL entries for closer inspection."""
+    """ERROR and CRITICAL entries pulled out for closer inspection"""
     high_priority = [
         entry for entry in entries
         if entry["severity"] in ("ERROR", "CRITICAL")
@@ -18,7 +18,7 @@ def get_errors_and_criticals(entries):
     return high_priority
 
 def find_repeated_errors(entries, threshold=3):
-    """Flag any error messages that appear more than threshold times."""
+    """Flag error messages that show up more than threshold times."""
     error_messages = [
         entry["message"] for entry in entries
         if entry["severity"] in ("ERROR", "CRITICAL")
@@ -26,7 +26,6 @@ def find_repeated_errors(entries, threshold=3):
 
     message_counts = Counter(error_messages)
 
-    # Only return messages that exceed the repeat threshold
     repeated = {
         msg: count
         for msg, count in message_counts.items()
